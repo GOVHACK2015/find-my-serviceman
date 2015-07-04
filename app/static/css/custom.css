@@ -1,22 +1,112 @@
-#navmain {
-	background: url(../images/background_image.png);
-	height: 716px;
-	color: white;
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
 }
 
-#navmain::after {
-	content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
+<!-- ===== Lists ===== -->
+
+ul li {
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+}
+.titles {
+    text-align: center;
+}
+
+.hideme {
+    display: none;
+}
+
+<!-- ===== About Section ===== -->
+
+.aboutmain { #About Us
+	background: url(../images/background_white.png) repeat;
+    font-size: 6rem;
+}
+p {
+    padding: 5%;
+    text-align: center;
+}
+.blogtitle {
+    padding-left: 5%;
+}
+#greentext {
+    color: green;
+}
+.aboutdata { #About the Data
     width: 100%;
     height: 100%;
-    z-index: 1;
-    opacity: 0.6;
-    background: url(../images/green_overlay.png) repeat;
-    background-repeat: no-repeat;
+    background: url(../images/aboutdata_background.png) no-repeat;
     background-position: 50% 0;
+    font-size: 2rem;
+    z-index: -2;
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+}
+.aboutdata > p {
+    text-align: center;
+}
+#abouttitle {
+    padding-bottom: 2%;
+}
+#anyonetext {
+    color: #fff;
+    width: 10%;
+}
+
+input[type="text"], textarea {
+  background-color : #926B2D; 
+}
+
+select, option {
+    background-color : #926B2D;
+}
+
+option:hover{
+    background-color: #aa7c34;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3%;
+}
+.blogimage {
+    width: 100%;
+    height: 100%;
+}
+
+.blogmain {
+	background: url(../static/images/background_white.png) repeat;
+}
+
+<!-- ============================================= Navigation ============================================================ -->
+
+.navbar-right {
+    padding: 3%;
+    font-size: 3rem;
+    color: #fff;
+    z-index: 4;
+    background-color: red;
+
+}
+.navsearch {
+    background: url(../images/green_overlay.png) no-repeat; #Photo of classroom
+    background-position: 50% 0;
+    z-index: -2;
+    height: 100vh;
+    background-repeat: no-repeat;
     -ms-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
@@ -24,17 +114,30 @@
     background-size: cover;
 }
 
+.searcharea {
+    position: relative;
+    padding-bottom: 40vh;
+    font-size: 6rem;
+    color: #fff;
+}
+.links {
+    color: #006600;
+    text-decoration: underline;
+}
 
-#aboutmain {
-	background-color: pink;
+<!-- ======================================================= footy ======================================================= -->
+.footer.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
 }
-#aboutdata {
-	background-color: red;
+.bottom > footer {
+    background-color: yellow;
 }
 
-#blogmain {
-	background-color: green;
-}
-#bottommain {
-	background-color: yellow;
-}
+
+
+
+
