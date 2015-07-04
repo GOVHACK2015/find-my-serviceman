@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+
+	<title>Find My Serviceman</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/custom.css">
+	<link rel="icon" type="image/png" href="../static/images/favicon.png">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+
+	<script>
+		function showTextarea(){
+			document.getElementById('anyonelink').style.display = 'none';
+			document.getElementById('anyonetext').style.display = 'block';
+		}
+		function showDateselect(){
+			document.getElementById('anytimelink').style.display = 'none';
+			document.getElementById('anytimeselect').style.display = 'block';
+		}
+		function showPersonselect(){
+			document.getElementById('personlink').style.display = 'none';
+			document.getElementById('personselect').style.display = 'block';
+		}
+	</script>
+	
+
+</head>
+
+<body>
+		<div class="container-fluid topcontent">
+			<div class="row navsearch">
+			<figure class="tint">
+				<div class="col-md-12">
+					
+
+						<nav class="navbar navbar-default navtext navmain navbar-static-top">
+						    <!-- Brand and toggle get grouped for better mobile display -->
+						    <!-- Collect the nav links, forms, and other content for toggling -->
+						      <ul class="nav navbar-nav navbar-right ">
+						        <li><a href="#">Signup</a></li>
+						        <li><a href="#">Login</a></li>
+						        <li><a href="#">About Data</a></li>
+						        <li><a href="#">About Us</a></li>
+						        <li><a href="#">Results</a></li>
+						        <li><a href="#">Home</a></li>
+						      </ul>
+						</nav>
+
+						<div class="searcharea">
+							<form action="#">
+								<div class="col-md-4">
+								<label for="servicename">I am looking for</label>
+									<a href="#" onclick="showTextarea();" class="links" id="anyonelink">anyone</a>
+									<span class="hideme" id="anyonetext">
+										<input type="text" placeholder="Enter Name" id="servicename"/>
+									</span>
+								</div>
+								<div class="col-md-4">
+								<label>who served during</label>
+									<a href="#" onclick="showDateselect();" class="links" id="anytimelink">anytime</a>
+										<span class="hideme" id="anytimeselect"> 
+											<select>
+											  <option value="">select range</option>
+											  <option value="1788-1901">1788-1901</option>
+											  <option value="1902-1945">1902-1945</option>
+											  <option value="1946-1985">1946-1985</option>
+											  <option value="1985-2015">1985-2015</option>
+											</select>
+										</span>
+								</div>
+								<div class="col-md-4">
+								<label>as a</label><br>
+									<a href="#" onclick="showPersonselect();" class="links" id="personlink">serviceperson</a>
+										<span class="hideme" id="personselect">
+											<select>
+											  <option value="">select rank</option>
+											  <option value="Officer Cadet">Officer Cadet</option>
+											  <option value="Lieutenant">Lieutenant</option>
+											  <option value="Captain">Captain</option>
+											  <option value="Private">Private</option>
+											</select>
+										</span>
+								
+								
+								</div>
+								<div class="container-fluid">
+									<div class="col-md-12">
+										<input type="image" id="search_button" src="../static/images/search_button.png" alt="Submit" />
+									</div>
+								</div>
+							</form>
+						</div>
+
+					</div>
+				</figure>
+			</div>
+		</div>
+
+		<div class="container-fluid aboutmain">
+			<div class="row">
+				<h1 class="titles" id="greentext">About Us</h1>
+					<div class="col-md-4">
+						<img src="../static/images/icon_left.png" alt="icon_left"/>
+					</div>
+					
+					<div class="col-md-4">
+						<img src="../static/images/icon_middle.png" alt="icon_middle"/>
+					</div>
+
+					<div class="col-md-4">
+						<img src="../static/images/icon_right.png" alt="icon_right"/>
+					</div>
+			</div>
+		</div>
+
+		<div class="container-fluid aboutmainbottom">
+			<div class="row">
+					<div class="col-md-4">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+					</div>
+					<div class="col-md-4">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+					</div>
+					<div class="col-md-4">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+					</div>
+			</div>
+		</div>
+
+
+
+		<div class="container-fluid aboutdata">
+			<div class="row">
+				<h1 class="titles" id="abouttitle">About the Data</h1>
+					<div class="col-md-3">
+						<img src="../static/images/symbol_1.png" alt="symbol_1"/>
+						<p>Photographs, artworks, weapons, uniforms & technology</p>
+					</div>
+					<div class="col-md-3">
+						<img src="../static/images/symbol_2.png" alt="symbol_2"/>
+						<p>People profiles with biographies</p>
+					</div>
+					<div class="col-md-3">
+						<img src="../static/images/symbol_3.png" alt="symbol_3"/>
+						<p>Roll Entries</p>
+					</div>
+					<div class="col-md-3">
+						<img src="../static/images/symbol_4.png" alt="symbol_4"/>
+						<p>History</p>
+					</div>
+			</div>
+		</div>
+
+		<div class="container-fluid blogmain">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 id="greentext">latest from the blog</h1>
+					<h2 class="titles">keep on track of latest news and updates</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<img src="../static/images/blog_image1.png" alt="blog_image1" class="blogimage"/>
+					<h3 class="blogtitle">Friay, 24 June 2015</h3>
+					<h2 class="blogtitle">wwi data available</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+						eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
+						in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="col-md-4">
+					<img src="../static/images/blog_image2.png" alt="blog_image2" class="blogimage"/>
+					<h3 class="blogtitle">Friday, June 25 2015</h3>
+					<h2 class="blogtitle">wwi data available</h2>
+						<p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+						eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
+						in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="col-md-4">
+					<img src="../static/images/blog_image3.png" alt="blog_image3" class="blogimage"/>
+					<h3 class="blogtitle">Friday, 26 June 2015</h3>
+					<h2 class="blogtitle">getting started</h2>
+					<p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+						eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
+						in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid bottom">
+			<div class="row">
+				<footer class="footer">
+					
+				       <nav class="navbar navbar-default navbar-bottom" role="navigation">
+
+						 	
+						</nav>
+				</footer>
+			</div>
+		</div>
+
+	</body>
+</html>
