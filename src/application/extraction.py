@@ -181,10 +181,15 @@ def pretty_print(obj):
 	print json.dumps(obj, sort_keys=True, indent=4, separators=(',', ': '))
 
 
-def search(name = None, rank = None, year =None):
-#        url='https://www.awm.gov.au/direct/data.php?key=ww1hack2015&q=%s AND record_type:people' % name
-        url2='https://www.awm.gov.au/direct/data.php?key=ww1hack2015&q=%s AND record_type:people AND base_rank:%s' % name, search
+def search(name, rank = None, year =None):
+        #TODO allow for more open search
+        url='https://www.awm.gov.au/direct/data.php?key=ww1hack2015&q={0} AND record_type:people'.format(name)
+        
+        if rank is not None:
+            url=url+' AND base_rank:{}'.format(rank)
 
+
+        print url
 	r = requests.get(url)
 	temp_json = r.json()
 	
@@ -192,6 +197,8 @@ def search(name = None, rank = None, year =None):
 
 
 def prepare_json_stack():
+    
+    #TODO fix root
     evil_hardcoded_name="William Edward James Smith"
     evil_hardcode_unitcode="U20795"
 
@@ -233,12 +240,12 @@ def get_persons_name(obj):
 
 
     
-#a =  search("William Cockshutt")
-#for b in a:	
-#	print b
+a =  search("William Cockshutt")
+for b in a:	
+	print b
 
 
 
-a = prepare_json_stack()
+#a = prepare_json_stack()
 
-pretty_print(a)
+#pretty_print(a)
