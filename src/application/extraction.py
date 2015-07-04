@@ -191,17 +191,54 @@ def search(name = None, rank = None, year =None):
 	return temp_json['results']
 
 
+def prepare_json_stack():
+    evil_hardcoded_name="William Edward James Smith"
+    evil_hardcode_unitcode="U20795"
 
-a =  get_roles_in_unit("U51462")
-for b in a:	
-	print b
 
-a =  get_people_by_unit_role("U51462", "Donkeyman")
-for b in a:	
-	print b
+
+    role_list = []
+    for role in get_roles_in_unit(evil_hardcode_unitcode):
+        people_list=[]
+        for person in get_people_by_unit_role(evil_hardcode_unitcode, role):
+            people_list.append(dict(name=get_persons_name(person)))
+
+         
+        
+
+
+        role_list.append(dict(name=role, children = people_list))
+    
+    list_of_units=[] 
+    list_of_units.append(dict(name=evil_hardcode_unitcode, children=role_list))
+    root = dict(name=evil_hardcoded_name, children=list_of_units)
+
+    return root
+    
+    
+def get_persons_name(obj):
+    try:
+        return obj['preferred_name']
+    except KeyError:
+        return "NA"
+
+
+#a =  get_roles_in_unit("U51462")
+#for b in a:	
+#	print b
+
+#a =  get_people_by_unit_role("U51462", "Donkeyman")
+#for b in a:	
+#	print b
 
 
     
-a =  search("William Cockshutt")
-for b in a:	
-	print b
+#a =  search("William Cockshutt")
+#for b in a:	
+#	print b
+
+
+
+a = prepare_json_stack()
+
+pretty_print(a)
