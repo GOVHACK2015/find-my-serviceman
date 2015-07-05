@@ -38,8 +38,7 @@ li {
     padding-top: 10%;
 }  
 p {
-    width: 95%;
-    padding: 5%;
+    width: 100%;
     text-align: center;
     word-wrap: break-word;
 }
@@ -111,7 +110,7 @@ img {
     margin-right: auto;
     padding: 3%;
 }
-<!-- ============================================= Blog ============================================================ -->
+<!-- ============================================= Blog + Results ============================================================ -->
 .blogimage {
     width: 100%;
     height: 100%;
@@ -122,6 +121,12 @@ img {
 	background: url(../static/images/background_white.png) repeat;
     color: #878787;
 }
+.resultsarea {
+    text-align: left;
+}
+#alignme {
+    text-align: left;
+}
 
 <!-- ============================================= Navigation ============================================================ -->
 
@@ -130,6 +135,10 @@ img {
     font-size: 3rem;
     z-index: 4;
     background-color: red;
+}
+
+.navbar-nav {
+    width: 100%;
 }
 .navsearch {
     background: url(../images/green_overlay.png) no-repeat; #Photo of classroom

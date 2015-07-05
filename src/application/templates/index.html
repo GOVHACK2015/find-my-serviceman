@@ -54,19 +54,19 @@
 
 
 						<div class="searcharea">
-							<form action="#">
+							<form action="/results" method="POST">
 								<div class="col-md-4">
 								<label for="servicename">I am looking for</label>
 									<a href="#" onclick="showTextarea();" class="links" id="anyonelink">anyone</a>
 									<span class="hideme" id="anyonetext">
-										<input type="text" placeholder="Enter Name" id="servicename"/>
+										<input type="text" placeholder="Enter Name" name="servicename"/>
 									</span>
 								</div>
 								<div class="col-md-4">
 								<label>who served during</label>
 									<a href="#" onclick="showDateselect();" class="links" id="anytimelink">anytime</a>
 										<span class="hideme" id="anytimeselect"> 
-											<select>
+											<select name="serviceyear">
 											  <option value="">select range</option>
 											  <option value="1788-1901">1788-1901</option>
 											  <option value="1902-1945">1902-1945</option>
@@ -79,7 +79,7 @@
 								<label>as a</label><br>
 									<a href="#" onclick="showPersonselect();" class="links" id="personlink">serviceperson</a>
 										<span class="hideme" id="personselect">
-											<select>
+											<select name="servicerank">
 											  <option value="">select rank</option>
 											  <option value="Officer Cadet">Officer Cadet</option>
 											  <option value="Lieutenant">Lieutenant</option>
@@ -92,7 +92,7 @@
 								</div>
 								<div class="container-fluid button">
 									<div class="col-md-12">
-										<input type="image" id="search_button" src="{{ url_for('static', filename='images/search_button.png') }}" alt="Submit" />
+										<input type="image" id="search_button" src="{{ url_for('static', filename='images/search_button.png') }}" alt="Submit" onclick="submit"/>
 									</div>
 								</div>
 							</form>

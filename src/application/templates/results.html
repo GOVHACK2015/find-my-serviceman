@@ -49,13 +49,32 @@
 		</nav>
 				
 
-		<div class="container-fluid aboutmainbottom">
+		<div class="container-fluid resultsarea">
 			<div class="row">
-					<div class="col-md-4">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				<div class="col-md-12">
+				</div>
+			</div>
+			<div class="row">
+					<div class="col-md-2">
+						
 					</div>
-					<div class="col-md-8">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+					<div class="col-md-3">
+						<img src="{{ url_for('static', filename='images/empty_image.png') }}" alt="blog_image1"/>
+					</div>
+					<div class="col-md-5 resultdiv">
+					<span id="alignme">
+						<h3>5430 - {{ name }}   {{ rank }}</h3>
+						<p>Search results for:</p>
+						<p><span id="greentext">{{ name }}</span> who served in {{ year }} as a {{ rank }}</p>
+						<p>Unit: 22nd Australian Infantry Battalion</p>
+						<p>Service: Australian Army</p>
+						<p>Conflict: First World War, 1914-1918</p>
+						<p>Date of Death: 03 October 1917 (Age: 27)</p>
+						<p>Place of Death: Belgium</p>
+					</span>
+					</div>
+					<div class="col-md-2">
+						
 					</div>
 					
 			</div>
