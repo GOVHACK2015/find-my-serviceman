@@ -14,22 +14,25 @@ function myFunction(data) {
   
   var searchedPerson = sys.addNode('searchedPerson', { 'color':'red','label': center_man,'fixed':'true'} );
   
-	// for (var i = 0; i < anythings.children.length; i++) {
-	// 	var curr_unit = anythings.children[i];
-	// 	console.log(curr_unit);
-	// 	var unit_number = anythings.children[i].name;
-	// 	console.log(unit_number);
-
-	// 	for (var j = 0; j < curr_unit.children.length; j++) {
-	// 		var curr_rank = curr_unit.children[j];
-	// 		console.log(curr_rank);
-
-	// 		for (var k = 0; k < curr_rank.children.length; k++) {
-	// 			var curr_squad_mem = curr_rank.children[k];
-	// 			console.log(curr_squad_mem);
-	// 		}
-	// 	}
-	// }
+	for (var i = 0; i < data.children.length; i++) {
+	  var curr_unit = data.children[i];
+	  console.log(curr_unit);
+	  var unit_number = data.children[i].name;
+    var unitID = sys.addNode('unitNode'+i, { 'color':'red','label': unit_number,'fixed':'true'} );
+	  var newEdge = sys.addEdge(searchedPerson,unitID);
+  
+    for (var j = 0; j < curr_unit.children.length; j++) {
+	 	  var curr_rank = curr_unit.children[j];
+	 		var rankID = sys.addNode('rankID'+j, { 'color':'red','label':curr_rank.name,'fixed':'true'} );
+      var newRankEdge = sys.addEdge(unitID, rankID);
+    
+	 		for (var k = 0; k < curr_rank.children.length; k++) {
+	 			var curr_squad_mem = curr_rank.children[k];
+	 		  var curr_squd = sys.addNode('squadId'+k, { 'color':'red','label':curr_squad_mem.name,'fixed':'true'} );
+        var newSqudEdge = sys.addEdge(rankID, curr_squd);
+	 		}
+	 	}
+	 }
 }
 
 // EXAMPLE
