@@ -17,6 +17,9 @@ def home():
 def index():
 	return render_template('index.html')
 
+def network():
+  return render_template('map.html');
+
 def josh():
     a = extraction.prepare_json_stack() 
     print a

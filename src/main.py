@@ -9,6 +9,7 @@ app = Flask(__name__, static_folder='application/static', template_folder='appli
 app.add_url_rule('/', 'home', view_func=views.home)
 app.add_url_rule('/results', 'results', view_func=views.results, methods=['GET','POST'])
 app.add_url_rule('/index', 'index', view_func=views.index)
+app.add_url_rule('/network', 'network', view_func=views.network)
 
 app.add_url_rule('/josh', 'josh', view_func=views.josh)
 # Errors
