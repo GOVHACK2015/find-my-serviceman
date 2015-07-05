@@ -9,6 +9,7 @@ app.add_url_rule('/', 'home', view_func=views.home)
 
 app.add_url_rule('/index', 'index', view_func=views.index)
 
+app.add_url_rule('/josh', 'josh', view_func=views.josh)
 # Errors
 @app.errorhandler(404)
 def page_not_found(e):

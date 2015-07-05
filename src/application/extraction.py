@@ -210,10 +210,6 @@ def prepare_json_stack():
         for person in get_people_by_unit_role(evil_hardcode_unitcode, role):
             people_list.append(dict(name=get_persons_name(person)))
 
-         
-        
-
-
         role_list.append(dict(name=role, children = people_list))
     
     list_of_units=[] 
