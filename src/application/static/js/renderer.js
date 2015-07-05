@@ -123,6 +123,10 @@
         nearest = null;
         var dragged = null;
         var oldmass = 1
+        
+        var numberOfNodes = 1;
+        var nodez = new Array();
+        var infoColor = 'green';
 
         // set up a handler object that will initially listen for mousedowns then
         // for moves and mouseups while dragging
@@ -133,6 +137,17 @@
             selected = nearest = dragged = particleSystem.nearest(_mouseP);
 
             if (dragged.node !== null) dragged.node.fixed = true
+            
+            if (selected.node !== null) {
+              nodez[numberOfNodes] = sys.addNode('node'+numberOfNodes,{'label':'Node-'+numberOfNodes,'color': infoColor,'shape':'dot'});
+              sys.addEdge(selected.node,sys.getNode('node'+numberOfNodes));
+              numberOfNodes+=1;
+              if (numberOfNodes%2 == 0){
+               infoColor='blue'; 
+              } else {
+               infoColor='green';
+              }
+            }
 
             $(canvas).bind('mousemove', handler.dragged)
             $(window).bind('mouseup', handler.dropped)
