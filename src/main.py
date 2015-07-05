@@ -1,7 +1,7 @@
 from flask import Flask
 
 from application import views
-from flask import render_template, request
+from flask import render_template
 
 # This could be done in init
 app = Flask(__name__, static_folder='application/static', template_folder='application/templates')
@@ -10,7 +10,7 @@ app.add_url_rule('/', 'home', view_func=views.home)
 app.add_url_rule('/results', 'results', view_func=views.results, methods=['GET','POST'])
 app.add_url_rule('/index', 'index', view_func=views.index)
 
-
+app.add_url_rule('/josh', 'josh', view_func=views.josh)
 # Errors
 @app.errorhandler(404)
 def page_not_found(e):
