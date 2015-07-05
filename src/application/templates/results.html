@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+
+	<title>Find My Serviceman</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}">
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+
+	<script>
+		function showTextarea(){
+			document.getElementById('anyonelink').style.display = 'none';
+			document.getElementById('anyonetext').style.display = 'block';
+		}
+		function showDateselect(){
+			document.getElementById('anytimelink').style.display = 'none';
+			document.getElementById('anytimeselect').style.display = 'block';
+		}
+		function showPersonselect(){
+			document.getElementById('personlink').style.display = 'none';
+			document.getElementById('personselect').style.display = 'block';
+		}
+	</script>
+	
+
+</head>
+
+<body>
+
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">Find My Serviceman</a>
+		    </div>
+		    <div>
+		      <ul class="nav navbar-nav">
+		        <li><a href="#">Home</a></li>
+		        <li><a href="#">Results</a></li> 
+		        <li><a href="#">About Us</a></li> 
+		        <li><a href="#">About Data</a></li> 
+		        <li><a href="#">Blog</a></li> 
+		        <li><a href="#">Login</a></li> 
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+				
+
+		<div class="container-fluid aboutmainbottom">
+			<div class="row">
+					<div class="col-md-4">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+					</div>
+					<div class="col-md-8">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+					</div>
+					
+			</div>
+		</div>
+
+
+		<div class="container-fluid bottom">
+			<div class="row">
+				<footer class="footer">
+					
+				       <nav class="navbar navbar-default navbar-bottom" role="navigation">
+
+						 	
+						</nav>
+				</footer>
+			</div>
+		</div>
+
+	</body>
+</html>

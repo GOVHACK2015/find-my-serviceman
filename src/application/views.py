@@ -15,3 +15,6 @@ def home():
 
 def index():
 	return render_template('index.html')
+
+def results():
+	return render_template('results.html')
