@@ -1,4 +1,4 @@
-import json
+import json, extraction
 
 from flask import render_template, request
 
@@ -18,14 +18,11 @@ def index():
 	return render_template('index.html')
 
 def network():
-  return render_template('map.html');
+  a = extraction.prepare_json_stack() 
+  return render_template('map.html', var=json.dumps(a))
 
 def josh():
-    a = extraction.prepare_json_stack() 
-    print a
-    
-    return extraction.pretty_print(a)
-#    return "cats"
+    return 'cats'
 
 def results():
 	if request.method == 'POST':

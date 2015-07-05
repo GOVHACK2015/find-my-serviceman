@@ -5,19 +5,26 @@
   <head>
   
   <!-- Javascript Library -->
-  <script src="../../static/js/jquery-2.1.4.min.js"></script>
-  <script src="../../static/js/arbor-v0.92/lib/arbor.js"></script>
-  <script src="../../static/js/arbor-v0.92/lib/arbor-tween.js"></script>
-  <script src="../../static/js/graphics.js"></script>
-  <script src="../../static/js/renderer.js"></script>
+  <script src="{{ url_for('static', filename='js/jquery-2.1.4.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/arbor-v0.92/lib/arbor.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/arbor-v0.92/lib/arbor-tween.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/graphics.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/renderer.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   
   <head/>
 
   <body>
 
     <canvas id="viewport" width="1280" height="720"></canvas>
-    <!-- Script to Insert Arbor -->
-    <script src="../../static/js/main.js"></script>
+  
+  <!-- Passing the data into the Javascript -->
+  <script>
+
+    var anythings = {{ var|safe }};
+    myFunction(anythings);
+
+  </script>
   
   <body/>
 
