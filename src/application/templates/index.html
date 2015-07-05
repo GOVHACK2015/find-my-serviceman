@@ -5,9 +5,9 @@
 
 
 	<title>Find My Serviceman</title>
-	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/custom.css">
-	<link rel="icon" type="image/png" href="../static/images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}">
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 
 	<script>
@@ -29,24 +29,29 @@
 </head>
 
 <body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Find My Serviceman</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Results</a></li> 
+        <li><a href="#">About Us</a></li> 
+        <li><a href="#">About Data</a></li> 
+        <li><a href="#">Blog</a></li> 
+        <li><a href="#">Login</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
 		<div class="container-fluid topcontent">
 			<div class="row navsearch">
-			<figure class="tint">
-				<div class="col-md-12">
-					
+				<figure class="tint">
+					<div class="col-md-12">
 
-						<nav class="navbar navbar-default navtext navmain navbar-static-top">
-						    <!-- Brand and toggle get grouped for better mobile display -->
-						    <!-- Collect the nav links, forms, and other content for toggling -->
-						      <ul class="nav navbar-nav navbar-right ">
-						        <li><a href="#">Signup</a></li>
-						        <li><a href="#">Login</a></li>
-						        <li><a href="#">About Data</a></li>
-						        <li><a href="#">About Us</a></li>
-						        <li><a href="#">Results</a></li>
-						        <li><a href="#">Home</a></li>
-						      </ul>
-						</nav>
 
 						<div class="searcharea">
 							<form action="#">
@@ -85,9 +90,9 @@
 								
 								
 								</div>
-								<div class="container-fluid">
+								<div class="container-fluid button">
 									<div class="col-md-12">
-										<input type="image" id="search_button" src="../static/images/search_button.png" alt="Submit" />
+										<input type="image" id="search_button" src="{{ url_for('static', filename='images/search_button.png') }}" alt="Submit" />
 									</div>
 								</div>
 							</form>
@@ -102,15 +107,15 @@
 			<div class="row">
 				<h1 class="titles" id="greentext">About Us</h1>
 					<div class="col-md-4">
-						<img src="../static/images/icon_left.png" alt="icon_left"/>
+						<img src="{{ url_for('static', filename='images/icon_left.png') }}" alt="icon_left"/>
 					</div>
 					
 					<div class="col-md-4">
-						<img src="../static/images/icon_middle.png" alt="icon_middle"/>
+						<img src="{{ url_for('static', filename='images/icon_middle.png') }}" alt="icon_middle"/>
 					</div>
 
 					<div class="col-md-4">
-						<img src="../static/images/icon_right.png" alt="icon_right"/>
+						<img src="{{ url_for('static', filename='images/icon_right.png') }}" alt="icon_right"/>
 					</div>
 			</div>
 		</div>
@@ -135,19 +140,19 @@
 			<div class="row">
 				<h1 class="titles" id="abouttitle">About the Data</h1>
 					<div class="col-md-3">
-						<img src="../static/images/symbol_1.png" alt="symbol_1"/>
+						<img src="{{ url_for('static', filename='images/symbol_1.png') }}" alt="symbol_1"/>
 						<p>Photographs, artworks, weapons, uniforms & technology</p>
 					</div>
 					<div class="col-md-3">
-						<img src="../static/images/symbol_2.png" alt="symbol_2"/>
+						<img src="{{ url_for('static', filename='images/symbol_2.png') }}" alt="symbol_2"/>
 						<p>People profiles with biographies</p>
 					</div>
 					<div class="col-md-3">
-						<img src="../static/images/symbol_3.png" alt="symbol_3"/>
+						<img src="{{ url_for('static', filename='images/symbol_3.png') }}" alt="symbol_3"/>
 						<p>Roll Entries</p>
 					</div>
 					<div class="col-md-3">
-						<img src="../static/images/symbol_4.png" alt="symbol_4"/>
+						<img src="{{ url_for('static', filename='images/symbol_4.png') }}" alt="symbol_4"/>
 						<p>History</p>
 					</div>
 			</div>
@@ -162,7 +167,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-4">
-					<img src="../static/images/blog_image1.png" alt="blog_image1" class="blogimage"/>
+					<img src="{{ url_for('static', filename='images/blog_image1.png') }}" alt="blog_image1" class="blogimage"/>
 					<h3 class="blogtitle">Friay, 24 June 2015</h3>
 					<h2 class="blogtitle">wwi data available</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
@@ -173,7 +178,7 @@
 						in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 				<div class="col-md-4">
-					<img src="../static/images/blog_image2.png" alt="blog_image2" class="blogimage"/>
+					<img src="{{ url_for('static', filename='images/blog_image2.png') }}" alt="blog_image2" class="blogimage"/>
 					<h3 class="blogtitle">Friday, June 25 2015</h3>
 					<h2 class="blogtitle">wwi data available</h2>
 						<p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
@@ -184,7 +189,7 @@
 						in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 				<div class="col-md-4">
-					<img src="../static/images/blog_image3.png" alt="blog_image3" class="blogimage"/>
+					<img src="{{ url_for('static', filename='images/blog_image3.png') }}" alt="blog_image3" class="blogimage"/>
 					<h3 class="blogtitle">Friday, 26 June 2015</h3>
 					<h2 class="blogtitle">getting started</h2>
 					<p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 

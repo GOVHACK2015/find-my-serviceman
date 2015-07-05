@@ -1,7 +1,6 @@
 import json
 
 from flask import render_template
-import extraction
 
 def home():
 	some_other = {}
@@ -23,3 +22,6 @@ def josh():
     
     return extraction.pretty_print(a)
 #    return "cats"
+
+def results():
+	return render_template('results.html')
