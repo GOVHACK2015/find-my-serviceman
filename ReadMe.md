@@ -21,7 +21,7 @@ Invision Mockup Interation : https://projects.invisionapp.com/share/563GWOHCA
 
 Project Website : http://findmyserviceperson.dreamincode.me/
 
-Project Search Concept: http://find-my-serviceperson.appspot.com/
+Project Search Concept: http://find-my-serviceperson.appspot.com/index#
 	- Leads to results
 
 Project Map Concept: http://find-my-serviceperson.appspot.com/network
